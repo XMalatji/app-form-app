@@ -1,0 +1,28 @@
+<form [formGroup]="formGroup" role="form" class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input formControlName="name" matInput placeholder="">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Surname</mat-label>
+    <input matInput formControlName="surname" placeholder="" >
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>ID Number</mat-label>
+    <input matInput formControlName="idNo"  placeholder="">
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email address</mat-label>
+    <input matInput formControlName="email"  placeholder="">
+  </mat-form-field>
+
+  <button mat-raised-button color="warn" (click)="register()" [disabled]="!formGroup.valid">
+    <mat-icon>user</mat-icon>Register
+  </button>
+
+</form>
